@@ -56,7 +56,7 @@
 
     <div class="social-links text-center">
       <a href="https://github.com/mubeenfa" class="github"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/mubeenfahmed/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/mubeenfurqanahmed/" class="linkedin"><i class="bi bi-linkedin"></i></a>
       <a href="https://www.youtube.com/@mubeenfurqanahmed-mfa6873" class="youtube"><i class="bi bi-youtube"></i></a>
     </div>
 
@@ -86,7 +86,6 @@
             <li><a href="#">Dropdown 4</a></li>
           </ul>
         </li> -->
-        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
 
@@ -211,11 +210,13 @@
       });
 
       // Inject project info
+      // document.getElementById("project-info-list").innerHTML = `
+      //   <li><strong>Project URL</strong>: <a href="${data.url}" target="_blank">${data.url}</a></li>
+      // `;
       document.getElementById("project-info-list").innerHTML = `
-        <li><strong>Project URL</strong>: <a href="${data.url}" target="_blank">${data.url}</a></li>
-      `;
+      <li><strong>Project URL</strong>: <a href="${data.url}" target="_blank">Link Here</a></li>`;
       document.getElementById("project-title").textContent = data.title;
-      document.getElementById("project-description").textContent = data.description;
+      document.getElementById("project-description").innerHTML = data.description;
 
       // Initialize Swiper
       setTimeout(() => {
